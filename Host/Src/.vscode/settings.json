@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.sv": "tlverilog",
+        "stdbool.h": "c",
+        "string.h": "c"
+    }
+}
