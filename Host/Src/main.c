@@ -172,26 +172,6 @@ int main(void)
   // Hide cursor
   HAL_UART_Transmit(&huart2, (uint8_t *)"\x1B[?25l", strlen("\x1B[?25l"), HAL_MAX_DELAY);
 
-  // TEST -----------------------------------------------------------------------------------
-//  uint16_t testIn = 255;
-//  Save_EEPROM((uint8_t *) &testIn, 2, EEPROM_USER);
-//  char testIn1 = 'a';
-//  char testIn2 = 'z';
-//  EEPROM_SEND(EEPROM_USER, testIn1, testIn2);
-//
-//  char testOut[3] = {0};
-//  EEPROM_GET_MEM(EEPROM_USER, 2, (uint8_t *) testOut);
-//  char message[32] = {0};
-////  snprintf(message, 32, "testOut: %hu\r\n", (uint16_t) testOut[0]);
-//  snprintf(message, 32, "testOut: %s\r\n", testOut);
-//  HAL_UART_Transmit(&huart2, (uint8_t *) message, strlen(message), HAL_MAX_DELAY);
-//  return 0;
-  // END TEST -------------------------------------------------------------------------------
-
-  // uncomment to clear leaderboard
-//  EraseLeaderboard(LEADERBOARD_POSITIONS);
-//  return 0;
-
   // load leaderboard
   uint8_t EEPROM_BUF[40] = {0};
   EEPROM_GET_MEM(EEPROM_USER, 40, EEPROM_BUF);
